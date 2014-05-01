@@ -1,3 +1,9 @@
+var myApp = angular.module('myApp', []);
+
 function FirstCtrl($scope){
-  $scope.data = {message: "panel"};
+  
+}
+
+function SecondCtrl($scope){
+  
 }
