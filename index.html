@@ -12,11 +12,15 @@
     <h2>Things To Do!</h2>
    <div ng-controller="TodoCtrl">
     <span>{{remaining()}} of {{todos.length}} remaining</span>
-    [ <a href="" ng-click="archive()">archive</a>]
+    [ <a href="" ng-click="archive()">archive</a> ]
     <ul class="unstyled">
       <li ng-repeat="todo in todos">
         <input type="checkbox" ng-model="todo.done">
         <span class="done-{{todo.done}}">{{todo.text}}</span>
+        <input class="btn-primary" type="submit" ng-click="deleteTodo(todo)" value="delete">
+        <!-- <form ng-submit="deleteTodo(todo)">
+          <input class="btn-primary" type="submit" value="delete">
+        </form> -->
       </li>
     </ul>
     <form ng-submit="addTodo()">

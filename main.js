@@ -8,6 +8,11 @@ function TodoCtrl($scope){
     $scope.todoText = '';
   };
 
+  $scope.deleteTodo = function(item){
+    var index = $scope.todos.indexOf(item);
+    $scope.todos.splice(index, 1);
+  };
+
   $scope.remaining = function(){
     var count = 0;
     angular.forEach($scope.todos, function(todo){
